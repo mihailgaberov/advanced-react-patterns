@@ -5,7 +5,10 @@
 import * as React from 'react'
 import {Switch} from '../switch'
 
-const callAll = (...fns) => (...args) => fns.forEach(fn => fn?.(...args))
+const callAll =
+  (...fns) =>
+  (...args) =>
+    fns.forEach(fn => fn?.(...args))
 
 function toggleReducer(state, {type, initialState}) {
   switch (type) {
@@ -49,6 +52,7 @@ function useToggle({initialOn = false, reducer = toggleReducer} = {}) {
     toggle,
     getTogglerProps,
     getResetterProps,
+    toggleReducer,
   }
 }
 // export {useToggle, toggleReducer}
