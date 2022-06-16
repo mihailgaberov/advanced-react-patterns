@@ -81,7 +81,7 @@ async function updateUser(dispatch, user, updates) {
     dispatch({type: 'finish update', updatedUser})
     return updateUser
   } catch (error) {
-    dispatch({type: 'fail update', error}));
+    dispatch({type: 'fail update', error})
     throw error
   }
 }
