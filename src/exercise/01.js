@@ -73,18 +73,13 @@ function useUser() {
   return context
 }
 
-// 🐨 add a function here called `updateUser`
 function updateUser(dispatch, user, updates) {
-  // 🐨 move the following logic to the `updateUser` function you create above
   dispatch({type: 'start update', updates})
   userClient.updateUser(user, updates).then(
     updatedUser => dispatch({type: 'finish update', updatedUser}),
     error => dispatch({type: 'fail update', error}),
   )
 }
-
-// Then go down to the `handleSubmit` from `UserSettings` and put that logic in
-// this function. It should accept: dispatch, user, and updates
 
 // export {UserProvider, useUser, updateUser}
 
