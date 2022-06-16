@@ -6,7 +6,6 @@ import {dequal} from 'dequal'
 
 // ./context/user-context.js
 
-import * as userClient from '../user-client'
 import {useAuth} from '../auth-context'
 
 const UserContext = React.createContext()
